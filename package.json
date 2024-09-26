@@ -1,0 +1,19 @@
+{
+  "name": "todolist-",
+  "version": "1.0.0",
+  "description": "Todolist in js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Badieljean/TodoList-JS.git"
+  },
+  "author": "Badiel Jean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Badieljean/TodoList-JS/issues"
+  },
+  "homepage": "https://github.com/Badieljean/TodoList-JS#readme"
+}

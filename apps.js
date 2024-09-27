@@ -15,9 +15,6 @@ try {
 } catch(e){
     console.log("Erreur au niveau du lien https", e)
 }
-let n = 1;
-let arr = []
-
 document.querySelector('form .btn').addEventListener('click', (e)=>{
     e.preventDefault()
     let val = document.querySelector('.form-control').value

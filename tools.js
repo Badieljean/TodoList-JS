@@ -1,4 +1,4 @@
-
+import {todoItem} from './componants.js'
 /**
  * @param {string} element
  * @param {object} attributes
@@ -13,4 +13,9 @@ export function ComposeElement (element, attributes = {}, text){
     }
     el.innerText = text ? text : ""
     return el
+}
+
+export function addTodo(todoData){
+    let newTodo = new todoItem(todoData)
+    return newTodo.todo
 }

@@ -17,9 +17,9 @@ export class TodoLists {
         
         <main>
             <div class="btn-group mb-4" role="group">
-                <button type="button" class=" btn btn-outline-primary active" data-filter="all">Toutes</button>
-                <button type="button" class=" btn btn-outline-primary" data-filter="todo">A faire</button>
-                <button type="button" class=" btn btn-outline-primary" data-filter="done">Faites</button>
+                <button type="button" class=" btn btn-outline-primary active" id="all">Toutes</button>
+                <button type="button" class=" btn btn-outline-primary" id="to-do">A faire</button>
+                <button type="button" class=" btn btn-outline-primary" id="done">Faites</button>
             </div>
             <ul class="list-group"></ul>
         </main>
@@ -27,14 +27,6 @@ export class TodoLists {
 }
 }
 
-/*
-    {
-    "userId": 1,
-    "id": 1,
-    "title": "delectus aut autem",
-    "completed": false
-  },
-*/ 
 
 export class todoItem {
     constructor(todoData){
@@ -56,6 +48,7 @@ export class todoItem {
             },
         )
         this.todoData.completed? this.checkbox.checked = true  : ""
+        this.checkbox.addEventListener('change', (e)=> this.completed(e.currentTarget))
 
         //Creation du label
         this.label = create(
@@ -86,12 +79,20 @@ export class todoItem {
         })
 
         
-
+        
         //Append Todo
+        this.completed(this.checkbox)
         this.todo.append(this.checkbox, this.label, this.delete)
     }
 
-
+    completed(element){
+        if (element.checked){
+            this.todo.classList.add('Completed')
+        } else {
+            this.todo.classList.remove('Completed')
+        }
+        
+    }
 
 }
 
